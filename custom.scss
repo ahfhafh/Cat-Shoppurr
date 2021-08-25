@@ -1,3 +1,33 @@
+<<<<<<< HEAD
+/* import only the necessary Bootstrap files */
+@import "node_modules/bootstrap/scss/functions"; 
+@import "node_modules/bootstrap/scss/variables";
+
+/* -------begin customization-------- */
+$spacers: map-merge((
+  6: ($spacer * 6),
+  7: ($spacer * 8)), $spacers);
+
+* {
+  font-family: 'Varela Round', sans-serif;
+}
+
+.main-carousel-1 {
+  width:640px;
+  height:360px;
+}
+
+.carousel-inner > .item > img {
+  width:640px;
+  height:360px;
+}
+
+/* -------end customization-------- */
+
+/* finally, import Bootstrap to set the changes! */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+=======
 /* import only the necessary Bootstrap files */
 @import "node_modules/bootstrap/scss/functions"; 
 @import "node_modules/bootstrap/scss/variables";
@@ -16,3 +46,4 @@ $spacers: map-merge((
 /* finally, import Bootstrap to set the changes! */
 @import "node_modules/bootstrap/scss/bootstrap";
 
+>>>>>>> 1909a7a86a4d263955278ace834bb4af3fb9e5ec
