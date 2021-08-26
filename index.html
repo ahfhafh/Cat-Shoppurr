@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Varela+Round&display=swap" rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="style.css">
-    <title>Shoppurr</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="https://use.fontawesome.com/19cb58078c.js"></script> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Varela+Round&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Shoppurr</title>
 </head>
 <body>
-    <!-- Top navigation bar with search, logo, links, and login/signup -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark flex-column align-items-stretch">
-        <div class="d-flex justify-content-around">
-            <form class="d-flex align-self-baseline pt-4">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
-            <a href="#" class="navbar-brand pe-9"><img src="assets/cat_logo_light.png" alt="Logo" width="150" height="150">Shoppurr</a>
-            <ul class="navbar-nav py-3">
-                <a class="nav-link" href="#">Login</a>
-                <a class="nav-link" href="#">Signup</a>
-            </ul>
+  <!-- Top navigation bar with search, logo, links, and login/signup -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark flex-column align-items-stretch">
+    <div class="d-flex justify-content-around">
+      <form class="d-flex align-self-baseline pt-4">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+        <a href="#" class="navbar-brand pe-9"><img src="assets/cat_logo_light.png" alt="Logo" width="150" height="150">Shoppurr</a>
+        <ul class="navbar-nav py-3">
+          <a class="nav-link" href="#">Login</a>
+          <a class="nav-link" href="#">Signup</a>
+        </ul>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+            <li><a class="dropdown-item active" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+          </ul>
         </div>
-        <div class="container">
-            <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mx-auto py-3">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">About</a>
-                    <a class="nav-link" href="#">Shop</a>
-                    <a class="nav-link" href="#">Contact</a>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    </div>
+    <div class="container">
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mx-auto py-5" id="nav-links">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="#">Shop</a>
+            <a class="nav-link" href="#">Contact</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
     <!-- <div class="categories">
         <div class="row">
@@ -51,28 +64,90 @@
         </div>
     </div> -->
 
-    <div id="main-carousel-1" class="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/main-cat-toys-1.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/main-cat-toys-2.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="assets/main-cat-toys-3.jpeg" class="d-block w-100" alt="...">
+  <!-- Main page carousel -->
+  <div id="main-carousel-1" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#main-carousel-1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#main-carousel-1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#main-carousel-1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" align="center">
+        <img src="assets/main-cat-toys-1.jpg" class="d-block" alt="...">
+      </div>
+      <div class="carousel-item" align="center">
+        <img src="assets/main-cat-toys-2.jpg" class="d-block" alt="...">
+      </div>
+      <div class="carousel-item" align="center">
+        <img src="assets/main-cat-toys-3.jpg" class="d-block" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#main-carousel-1" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#main-carousel-1" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Featured Products -->
+  <div class="small-container" id="featured-products-1">
+    <h2>Featured Products</h2>
+    <div class="row">
+      <div class="col-4">
+        <div class="card" style="width: 18rem;">
+          <img src="/assets/cat_logo_dark.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="rating">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <p class="card-text">Cat Toy</p>
+            <p class="card-text">$50.00</p>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <div class="col-4">
+        <div class="card" style="width: 18rem;">
+          <img src="/assets/cat_logo_dark.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="rating">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <p class="card-text">Cat Toy</p>
+            <p class="card-text">$50.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card" style="width: 18rem;">
+          <img src="/assets/cat_logo_dark.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="rating">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+              <i class="bi bi-star"></i>
+            </div>
+            <p class="card-text">Cat Toy</p>
+            <p class="card-text">$50.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
 
