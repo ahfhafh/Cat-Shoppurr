@@ -1,0 +1,22 @@
+/* import only the necessary Bootstrap files */
+@import "node_modules/bootstrap/scss/functions"; 
+@import "node_modules/bootstrap/scss/variables";
+
+/* -------begin customization-------- */
+$spacers: map-merge((
+    6: ($spacer * 4),      //64px
+    7: ($spacer * 5),      //80px
+    8: ($spacer * 6.25),   //100px
+    9: ($spacer * 7.5),    //120px
+    10: ($spacer * 9.375)  //150px
+  ),
+  $spacers
+);
+* {
+  font-family: 'Varela Round', sans-serif;
+}
+/* -------end customization-------- */
+
+/* finally, import Bootstrap to set the changes! */
+@import "node_modules/bootstrap/scss/bootstrap";
+
