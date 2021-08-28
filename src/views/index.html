@@ -14,33 +14,40 @@
 </head>
 <body>
   <!-- Top navigation bar with search, logo, links, and login/signup -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark flex-column align-items-stretch">
-    <div class="d-flex justify-content-around">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark flex-column align-items-stretch">
+    <div class="d-flex justify-content-around collapse navbar-collapse" id="navbarSupportedContent1">
       <form class="d-flex align-self-baseline pt-4">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
-        <a href="#" class="navbar-brand pe-0"><img src="../../public/images/cat_logo_light.png" alt="Logo" width="150" height="150">Shoppurr</a>
-        <ul class="navbar-nav py-3">
-          <a class="nav-link" href="#">Login</a>
-          <a class="nav-link" href="#">Signup</a>
+
+      <a href="#" class="navbar-brand pe-0"><img src="../../public/images/cat_logo_light.png" alt="Logo" width="150" height="150">Shoppurr</a>
+      
+      <ul class="nav-item navbar-nav py-3">
+        <a class="nav-link" href="#">Login</a>
+        <a class="nav-link" href="#">Signup</a>
+      </ul>
+
+      <div class="nav-item dropdown pt-4">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+          $ CAD
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+          <li><a class="dropdown-item active" href="#">$ CAD</a></li>
+          <li><a class="dropdown-item" href="#">$ USD</a></li>
+          <li><a class="dropdown-item" href="#">$ AUD</a></li>
         </ul>
-        <div class="dropdown pt-4">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown button
-          </button>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-            <li><a class="dropdown-item active" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-          </ul>
-        </div>
+      </div>
     </div>
+  </nav>
+
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark" id="navlinksbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent1" aria-controls="navbarContent1" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="container">
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mx-auto py-3" id="nav-links">
+      <div class="collapse navbar-collapse" id="navbarContent1">
+        <ul class="navbar-nav mx-auto py-2" id="nav-links">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
             <a class="nav-link" href="#">About</a>
             <a class="nav-link" href="#">Shop</a>
@@ -49,20 +56,6 @@
       </div>
     </div>
   </nav>
-
-  <!-- <div class="categories">
-        <div class="row">
-            <div class="col-3">
-                <img src="assets/category-1.png">
-            </div>
-            <div class="col-3">
-                <img src="assets/category-2.png">
-            </div>
-            <div class="col-3">
-                <img src="assets/category-3.png">
-            </div>
-        </div>
-    </div> -->
 
   <!-- Main page carousel -->
   <div id="main-carousel-1" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -148,10 +141,9 @@
   </div>
 
   <!-- Footer -->
-  <footer class="container py-5" align="center">
+  <footer class="py-5 mx-auto" id="footer1" align="center">
     All right reserved
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
-

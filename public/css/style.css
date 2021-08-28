@@ -4,9 +4,13 @@ body {
   font-family: 'Varela Round', sans-serif; }
 
 #nav-links .nav-link {
-  font-size: 32px;
+  font-size: 26px;
   padding-left: 30px;
   padding-right: 30px;
+}
+
+#navlinksbar {
+  z-index: 1;
 }
 
 .carousel-dark .carousel-item, .carousel-item img  {
@@ -29,6 +33,10 @@ body {
 
 #featured-products-1 .col-4:hover{
   transform:translateY(-5px);
+}
+
+#footer1 {
+  background-color: #00414e59;
 }
 /* -------end customization-------- */
 /* finally, import Bootstrap to set the changes! */
