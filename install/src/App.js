@@ -1,5 +1,10 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import Dropdown from 'react-bootstrap/Dropdown'
+import Carousel from 'react-bootstrap/Carousel'
+import { StarFill } from 'react-bootstrap-icons';
+import { StarHalf } from 'react-bootstrap-icons';
+import { Star } from 'react-bootstrap-icons';
 
 function App() {
   return (
@@ -18,16 +23,11 @@ function App() {
             <a className="nav-link" href="/#">Signup</a>
           </ul>
 
-          <div className="nav-item dropdown pt-4">
-            <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-              $ CAD
-            </button>
-            <ul className="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-              <li><a className="dropdown-item active" href="/#">$ CAD</a></li>
-              <li><a className="dropdown-item" href="/#">$ USD</a></li>
-              <li><a className="dropdown-item" href="/#">$ AUD</a></li>
-            </ul>
-          </div>
+          <DropdownButton variant="dark" id="dropdown-currency" title="$ CAD" menuVariant="dark">
+            <Dropdown.Item href="#/action-1">$ CAD</Dropdown.Item>
+            <Dropdown.Item href="#/action-1">$ USD</Dropdown.Item>
+            <Dropdown.Item href="#/action-1">$ AUD</Dropdown.Item>
+          </DropdownButton>
         </div>
       </nav>
 
@@ -47,32 +47,17 @@ function App() {
         </div>
       </nav>
 
-      <div id="main-carousel-1" className="carousel carousel-dark slide" data-bs-ride="carousel">
-        <div className="carousel-indicators">
-          <button type="button" data-bs-target="#main-carousel-1" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#main-carousel-1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#main-carousel-1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active" align="center">
-            <img src={"./images/main-cat-toys-1.jpg"} className="d-block" alt="..."/>
-          </div>
-          <div className="carousel-item" align="center">
-            <img src={"./images/main-cat-toys-2.jpg"} className="d-block" alt="..."/>
-          </div>
-          <div className="carousel-item" align="center">
-            <img src={"./images/main-cat-toys-3.jpg"} className="d-block" alt="..."/>
-          </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#main-carousel-1" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#main-carousel-1" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+      <Carousel id="Main-Carousel">
+        <Carousel.Item className="Carousel-Item">
+          <img src={"./images/main-cat-toys-1.jpg"} className="d-block" alt="First slide"/>
+        </Carousel.Item>
+        <Carousel.Item className="Carousel-Item">
+          <img src={"./images/main-cat-toys-2.jpg"} className="d-block" alt="Second slide"/>
+        </Carousel.Item>
+        <Carousel.Item className="Carousel-Item">
+          <img src={"./images/main-cat-toys-3.jpg"} className="d-block" alt="Third slide"/>
+        </Carousel.Item>
+      </Carousel>
 
       <div className="small-container" id="featured-products-1">
         <h2>Featured Products</h2>
@@ -82,11 +67,11 @@ function App() {
               <img src={"./images/cat_logo_dark.png"} className="card-img-top" alt="..."/>
               <div className="card-body">
                 <div className="rating">
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-half"></i>
-                  <i className="bi bi-star"></i>
+                  <StarFill/>
+                  <StarFill/>
+                  <StarFill/>
+                  <StarHalf/>
+                  <Star/>
                 </div>
                 <p className="card-text">Cat Toy</p>
                 <p className="card-text">$50.00</p>
@@ -98,11 +83,11 @@ function App() {
               <img src={"./images/cat_logo_dark.png"} className="card-img-top" alt="..."/>
               <div className="card-body">
                 <div className="rating">
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-half"></i>
-                  <i className="bi bi-star"></i>
+                  <StarFill/>
+                  <StarFill/>
+                  <StarFill/>
+                  <StarHalf/>
+                  <Star/>
                 </div>
                 <p className="card-text">Cat Toy</p>
                 <p className="card-text">$50.00</p>
@@ -114,11 +99,11 @@ function App() {
               <img src={"./images/cat_logo_dark.png"} className="card-img-top" alt="..."/>
               <div className="card-body">
                 <div className="rating">
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-fill"></i>
-                  <i className="bi bi-star-half"></i>
-                  <i className="bi bi-star"></i>
+                  <StarFill/>
+                  <StarFill/>
+                  <StarFill/>
+                  <StarHalf/>
+                  <Star/>
                 </div>
                 <p className="card-text">Cat Toy</p>
                 <p className="card-text">$50.00</p>
@@ -127,6 +112,10 @@ function App() {
           </div>
         </div>
       </div>
+
+      <footer className="py-5 mx-auto" id="footer1" align="center">
+        All right reserved
+      </footer>
     </fragment>
   );
 }
