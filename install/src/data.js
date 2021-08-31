@@ -4,7 +4,7 @@ const data = {
             _id: '1',
             name: 'cat food',
             category: 'foods',
-            image:'/images/foods_1.jpg',
+            image:'/images/food_1.jpg',
             price: 42,
             brand: 'Yes',
             rating: 4.5,
@@ -15,7 +15,7 @@ const data = {
             _id: '2',
             name: 'cat food2',
             category: 'foods',
-            image:'/images/foods_1.jpg',
+            image:'/images/food_1.jpg',
             price: 42,
             brand: 'Yes',
             rating: 4.5,
@@ -26,7 +26,7 @@ const data = {
             _id: '3',
             name: 'cat food',
             category: 'foods',
-            image:'/images/foods_1.jpg',
+            image:'/images/food_1.jpg',
             price: 42,
             brand: 'Yes',
             rating: 3.5,
@@ -37,7 +37,7 @@ const data = {
             _id: '4',
             name: 'cat food',
             category: 'foods',
-            image:'/images/foods_1.jpg',
+            image:'/images/food_1.jpg',
             price: 42,
             brand: 'Yes',
             rating: 3,
@@ -48,7 +48,7 @@ const data = {
             _id: '5',
             name: 'cat food',
             category: 'foods',
-            image:'/images/foods_1.jpg',
+            image:'/images/food_1.jpg',
             price: 42,
             brand: 'Yes',
             rating: 4,
@@ -57,3 +57,5 @@ const data = {
         }
     ]
 }
+
+export default data;

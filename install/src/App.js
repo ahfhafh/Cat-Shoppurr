@@ -1,4 +1,5 @@
 import React from 'react';
+import data from './data';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
 import Carousel from 'react-bootstrap/Carousel'
@@ -16,17 +17,18 @@ function App() {
             <button className="btn btn-outline-success" type="submit">Search</button>
           </form>
 
-          <a href="/#" className="navbar-brand pe-0"><img src={"./images/cat_logo_light.png"} alt="Logo" width="150" height="150"/>Shoppurr</a>
+          <a href="/" className="navbar-brand pe-0"><img src={"./images/cat_logo_light.png"} alt="Logo" width="150" height="150"/>Shoppurr</a>
           
           <ul className="nav-item navbar-nav py-3">
-            <a className="nav-link" href="/#">Login</a>
-            <a className="nav-link" href="/#">Signup</a>
+            <a className="nav-link" href="/login">Login</a>
+            <a className="nav-link" href="/signup">Signup</a>
+            <a className="nav-link" href="/cart">Cart</a>
           </ul>
 
           <DropdownButton variant="dark" id="dropdown-currency" title="$ CAD" menuVariant="dark">
-            <Dropdown.Item href="#/action-1">$ CAD</Dropdown.Item>
-            <Dropdown.Item href="#/action-1">$ USD</Dropdown.Item>
-            <Dropdown.Item href="#/action-1">$ AUD</Dropdown.Item>
+            <Dropdown.Item href="/CAD">$ CAD</Dropdown.Item>
+            <Dropdown.Item href="/USD">$ USD</Dropdown.Item>
+            <Dropdown.Item href="/AUD">$ AUD</Dropdown.Item>
           </DropdownButton>
         </div>
       </nav>
@@ -62,9 +64,12 @@ function App() {
       <div className="small-container" id="featured-products-1">
         <h2>Featured Products</h2>
         <div className="row">
+          {data.products.map((product) => (
           <div className="col-4">
-            <div className="card" style={{width: '18rem'}}>
-              <img src={"./images/cat_logo_dark.png"} className="card-img-top" alt="..."/>
+            <div key={product._id} className="card" style={{width: '18rem'}}>
+              <a href={`/product/${product._id}`}>
+              <img src={product.image} className="card-img-top" alt={product.name}/>
+              </a>
               <div className="card-body">
                 <div className="rating">
                   <StarFill/>
@@ -73,43 +78,14 @@ function App() {
                   <StarHalf/>
                   <Star/>
                 </div>
-                <p className="card-text">Cat Toy</p>
-                <p className="card-text">$50.00</p>
+                <a href={`/product/${product._id}`}>
+                  <p className="card-text">{product.name}</p>
+                  <p className="card-price">${product.price}</p>
+                </a>
               </div>
             </div>
           </div>
-          <div className="col-4">
-            <div className="card" style={{width: '18rem'}}>
-              <img src={"./images/cat_logo_dark.png"} className="card-img-top" alt="..."/>
-              <div className="card-body">
-                <div className="rating">
-                  <StarFill/>
-                  <StarFill/>
-                  <StarFill/>
-                  <StarHalf/>
-                  <Star/>
-                </div>
-                <p className="card-text">Cat Toy</p>
-                <p className="card-text">$50.00</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-4">
-            <div className="card" style={{width: '18rem'}}>
-              <img src={"./images/cat_logo_dark.png"} className="card-img-top" alt="..."/>
-              <div className="card-body">
-                <div className="rating">
-                  <StarFill/>
-                  <StarFill/>
-                  <StarFill/>
-                  <StarHalf/>
-                  <Star/>
-                </div>
-                <p className="card-text">Cat Toy</p>
-                <p className="card-text">$50.00</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
