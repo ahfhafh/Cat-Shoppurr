@@ -3,9 +3,7 @@ import data from './data';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
 import Carousel from 'react-bootstrap/Carousel'
-import { StarFill } from 'react-bootstrap-icons';
-import { StarHalf } from 'react-bootstrap-icons';
-import { Star } from 'react-bootstrap-icons';
+import Product from './components/Product';
 
 function App() {
   return (
@@ -65,26 +63,7 @@ function App() {
         <h2>Featured Products</h2>
         <div className="row">
           {data.products.map((product) => (
-          <div className="col-4">
-            <div key={product._id} className="card" style={{width: '18rem'}}>
-              <a href={`/product/${product._id}`}>
-              <img src={product.image} className="card-img-top" alt={product.name}/>
-              </a>
-              <div className="card-body">
-                <div className="rating">
-                  <StarFill/>
-                  <StarFill/>
-                  <StarFill/>
-                  <StarHalf/>
-                  <Star/>
-                </div>
-                <a href={`/product/${product._id}`}>
-                  <p className="card-text">{product.name}</p>
-                  <p className="card-price">${product.price}</p>
-                </a>
-              </div>
-            </div>
-          </div>
+            <Product key={product._id} product={product}></Product>
           ))}
         </div>
       </div>
