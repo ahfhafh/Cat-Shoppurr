@@ -44,6 +44,31 @@ body {
   transform:translateY(-5px);
 }
 
+.rating {
+  color: #6f42c1;
+}
+
+.rating:hover {
+  color: #3c1e75;
+}
+
+.rating span:last-child {
+  padding-left: 10px;
+  color:rgb(0, 0, 0);
+}
+
+.card a{
+  text-decoration: none;
+}
+
+.card a p, h5 {
+  color:rgb(0, 0, 0)
+}
+
+.card a p:hover, h5:hover {
+  color:rgb(0, 3, 175);
+}
+
 #footer1 {
   background-color: #00414e59;
 }

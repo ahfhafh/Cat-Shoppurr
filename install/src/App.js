@@ -1,13 +1,13 @@
 import React from 'react';
-import data from './data';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown'
-import Carousel from 'react-bootstrap/Carousel'
-import Product from './components/Product';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './screens/Home';
+import Products from './screens/Products';
 
 function App() {
   return (
-    <fragment>
+    <BrowserRouter>
       <nav className="navbar navbar-expand-sm navbar-dark bg-dark flex-column align-items-stretch">
         <div className="d-flex justify-content-around collapse navbar-collapse" id="navbarSupportedContent1">
           <form className="d-flex align-self-baseline pt-4">
@@ -47,31 +47,13 @@ function App() {
         </div>
       </nav>
 
-      <Carousel id="Main-Carousel">
-        <Carousel.Item className="Carousel-Item">
-          <img src={"./images/main-cat-toys-1.jpg"} className="d-block" alt="First slide"/>
-        </Carousel.Item>
-        <Carousel.Item className="Carousel-Item">
-          <img src={"./images/main-cat-toys-2.jpg"} className="d-block" alt="Second slide"/>
-        </Carousel.Item>
-        <Carousel.Item className="Carousel-Item">
-          <img src={"./images/main-cat-toys-3.jpg"} className="d-block" alt="Third slide"/>
-        </Carousel.Item>
-      </Carousel>
-
-      <div className="small-container" id="featured-products-1">
-        <h2>Featured Products</h2>
-        <div className="row">
-          {data.products.map((product) => (
-            <Product key={product._id} product={product}></Product>
-          ))}
-        </div>
-      </div>
+      <Route path="/" component={Home} exact></Route>
+      <Route path="/products/:id" component={Products}></Route>
 
       <footer className="py-5 mx-auto" id="footer1" align="center">
         All right reserved
       </footer>
-    </fragment>
+    </BrowserRouter>    
   );
 }
 
