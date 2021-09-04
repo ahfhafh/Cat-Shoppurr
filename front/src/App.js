@@ -47,8 +47,8 @@ function App() {
         </div>
       </nav>
 
+      <Route path="/product/:id" component={Products}></Route>
       <Route path="/" component={Home} exact></Route>
-      <Route path="/products/:id" component={Products}></Route>
 
       <footer className="py-5 mx-auto" id="footer1" align="center">
         All right reserved
