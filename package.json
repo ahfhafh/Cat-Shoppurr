@@ -1,0 +1,22 @@
+{
+  "name": "ahfhafh.github.io-1",
+  "version": "1.0.0",
+  "description": "An e-commerce website using HTML, CSS, Javascript (react, node.js, and monogodb).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahfhafh/ahfhafh.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ahfhafh/ahfhafh.github.io/issues"
+  },
+  "homepage": "https://github.com/ahfhafh/ahfhafh.github.io#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
