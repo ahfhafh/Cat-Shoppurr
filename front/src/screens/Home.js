@@ -1,28 +1,18 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import Product from '../components/Product';
-import axios from 'axios';
 import Loading from '../components/Loading';
 import Message from '../components/Message';
+import { useDispatch, useSelector } from 'react-redux';
+import { listProducts } from '../actions/productActions'
 
 export default function Home() {
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
+    const dispatch = useDispatch();
+    const productList = useSelector((state) => state.productList);
+    const { loading, error, products } = productList;
+
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                setLoading(true);
-                const { data } = await axios.get('/api/products');
-                setLoading(false);
-                setProducts(data);
-            } catch (err) {
-                setError(err.message);
-                setLoading(false);
-            }
-            
-        }
-        fetchData();
+        dispatch(listProducts());
     }, []);
 
     return (
