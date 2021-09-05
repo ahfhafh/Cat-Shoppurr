@@ -72,6 +72,12 @@ body {
 #footer1 {
   background-color: #00414e59;
 }
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
 /* -------end customization-------- */
 /* finally, import Bootstrap to set the changes! */
 /*!

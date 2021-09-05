@@ -1,29 +1,31 @@
 import express from 'express';
+import data from './data.js';
+import path from 'path';
 
-const express = require("express");
-const path = require("path");
 const app = express();
-const port = process.env.PORT || 5060;
+const port = process.env.PORT || 4132;
 
-app.use("")
-
-app.get("/*", (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+app.get('/api/products', (req, res) => {
+    res.send(data.products);
 })
+
+app.get('/', (req, res) => {
+    res.send('Server Running');
+})
+
+// // SEND
+// app.get("/*", (req, res) => {
+//     res.sendFile(__dirname + '/index.html');
+// })
 
 app.listen(port, err => {
     if (err) {
         return console.log("Error", err);
     }
-    console.log("Server running...");
+    console.log(`Server running at http://localhost:${port}`);
 });
-
-// GET method route
-app.get('/', function (req, res) {
-    res.send('GET request to the homepage')
-})
-  
-// POST method route
+ 
+// POST
 app.post('/', function (req, res) {
     res.send('POST request to the homepage')
 })

@@ -15,7 +15,7 @@ function App() {
             <button className="btn btn-outline-success" type="submit">Search</button>
           </form>
 
-          <a href="/" className="navbar-brand pe-0"><img src={"./images/cat_logo_light.png"} alt="Logo" width="150" height="150"/>Shoppurr</a>
+          <a href="/" className="navbar-brand pe-0"><img src={"/images/cat_logo_light.png"} alt="Logo" width="150" height="150"/>Shoppurr</a>
           
           <ul className="nav-item navbar-nav py-3">
             <a className="nav-link" href="/login">Login</a>
