@@ -13,7 +13,7 @@ export default function Home() {
 
     useEffect(() => {
         dispatch(listProducts());
-    }, []);
+    }, [dispatch]);
 
     return (
         <Fragment>

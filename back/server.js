@@ -1,8 +1,8 @@
 import express from 'express';
 import data from './data.js';
-import path from 'path';
 
 const app = express();
+// eslint-disable-next-line no-undef
 const port = process.env.PORT || 4132;
 
 app.get('/api/products', (req, res) => {
@@ -13,10 +13,14 @@ app.get('/', (req, res) => {
     res.send('Server Running');
 })
 
-// // SEND
-// app.get("/*", (req, res) => {
-//     res.sendFile(__dirname + '/index.html');
-// })
+app.get('/api/products/:id', (req, res) => {
+    const product = data.products.find(x => x._id === req.params.id);
+    if(product) {
+        res.send(product);
+    } else {
+        res.status(404).send({message:'Product Not Found'});
+    }
+})
 
 app.listen(port, err => {
     if (err) {
@@ -24,8 +28,3 @@ app.listen(port, err => {
     }
     console.log(`Server running at http://localhost:${port}`);
 });
- 
-// POST
-app.post('/', function (req, res) {
-    res.send('POST request to the homepage')
-})

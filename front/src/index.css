@@ -4,6 +4,17 @@ body {
   font-family: 'Varela Round', sans-serif; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: calc(100vh - 50px);
+}
+
+#footer1 {
+  background-color: #0090ad;
+  padding: 20px 0px;
+}
+
+#footer_container {
+  width: 100%;
+  margin: 0 auto;
 }
 
 #root {
@@ -69,14 +80,23 @@ body {
   color:rgb(0, 3, 175);
 }
 
-#footer1 {
-  background-color: #00414e59;
-}
-
-.alert {
+#alert_message {
   padding: 1rem;
   border: 0.1rem solid transparent;
   border-radius: 0.5rem;
+  margin: 4vh;
+  background-color: rgba(255, 0, 0, 0.459);
+}
+
+#product_name {
+  margin-left: 5vh;
+  margin-top: 5vh;
+}
+
+#product_img {
+  display: block;
+  height: 55vh;
+  width: auto;
 }
 /* -------end customization-------- */
 /* finally, import Bootstrap to set the changes! */
