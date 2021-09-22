@@ -98,6 +98,13 @@ body {
   height: 55vh;
   width: auto;
 }
+
+img.cart-img {
+  max-width: 10rem;
+  width: 100%;
+}
+
+
 /* -------end customization-------- */
 /* finally, import Bootstrap to set the changes! */
 /*!
