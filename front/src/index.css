@@ -21,15 +21,52 @@ body {
   height: 100%;
 }
 
-#nav-links .nav-link {
+/* ------------ */
+
+.navbar-brand {
+  margin-left: 30px;
+}
+
+.nav-search Button {
+  color: #000;
+}
+
+.navbar-color {
+  color:rgb(0, 0, 0);
+}
+
+#nav-links {
   font-size: 26px;
   padding-left: 30px;
   padding-right: 30px;
-}
-
-#navlinksbar {
+  padding-bottom: 8px;
   z-index: 1;
 }
+
+.signin_form {
+  margin: 25px auto;
+  max-width: 40%;
+  padding: 2rem;
+  background-color: #0090ad7e;
+  border-radius: 15px;
+}
+
+.signin_form label {
+  margin: 2px;
+  display: block;
+}
+
+.signin_form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.signin_form button {
+  margin-left: 1rem;
+}
+
+/* ------------ */
 
 #Main-Carousel .Carousel-Item img  {
   display: block;
@@ -103,7 +140,6 @@ img.cart-img {
   max-width: 10rem;
   width: 100%;
 }
-
 
 /* -------end customization-------- */
 /* finally, import Bootstrap to set the changes! */
