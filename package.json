@@ -5,6 +5,8 @@
   "description": "An e-commerce website using HTML, CSS, Javascript (react, node.js, and monogodb).",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "nodemon --watch back --exec node --experimental-modules back/server.js"
   },
   "repository": {
@@ -16,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/ahfhafh/ahfhafh.github.io/issues"
   },
-  "homepage": "https://github.com/ahfhafh/ahfhafh.github.io#readme",
+  "homepage": "https://ahfhafh.github.io/Cat-Shoppurr",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^10.0.0",
@@ -29,6 +31,7 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-plugin-react": "^7.25.1",
+    "gh-pages": "^3.2.3",
     "nodemon": "^2.0.12"
   }
 }
