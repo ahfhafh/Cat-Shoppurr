@@ -32,7 +32,13 @@ body {
 }
 
 .navbar-color {
-  color:rgb(0, 0, 0);
+  text-decoration: none;
+  color:rgb(194, 194, 194);
+}
+
+.navbar-color:hover {
+  text-decoration: none;
+  color:rgb(109, 109, 109);
 }
 
 #nav-links {
@@ -41,6 +47,14 @@ body {
   padding-right: 30px;
   padding-bottom: 8px;
   z-index: 1;
+}
+
+.nav-link {
+  color:rgb(194, 194, 194) !important;
+}
+
+.nav-link:hover {
+  color:rgb(109, 109, 109) !important;
 }
 
 .signin_form {
@@ -139,6 +153,17 @@ body {
 img.cart-img {
   max-width: 10rem;
   width: 100%;
+}
+
+/* ----------------- */
+.accordion-item .accordion-button {
+  color: rgb(61, 61, 61);
+  font-weight: bold;
+}
+
+.checkout > div.active {
+  color: #000;
+  font-weight: bold;
 }
 
 /* -------end customization-------- */

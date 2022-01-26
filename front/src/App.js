@@ -7,6 +7,8 @@ import Products from './screens/Products';
 import Cart from './screens/Cart';
 import Signin from './screens/Signin'
 import Signup from './screens/Signup';
+import Shop from './screens/Shop';
+import Shipping from './screens/Shipping';
 import { signout } from './actions/userActions';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -36,7 +38,7 @@ function App() {
                 <Button variant="secondary">Search</Button>
               </form>
               
-              <div className='navbar-color'>
+              <div>
                 <Link>
                   {userInfo ? 
                     (<NavDropdown title={userInfo.name} menuVariant="dark">
@@ -44,13 +46,13 @@ function App() {
                       <NavDropdown.Divider/>
                       <Dropdown.Item to="#signout" onClick={signoutHandler}>sign out</Dropdown.Item>
                     </NavDropdown>)
-                    : <NavLink className="" to="/signin">Sign in</NavLink>}
+                    : <NavLink className='navbar-color' to="/signin">Sign in</NavLink>}
                 </Link>
-                <NavLink to="/cart">
+                <NavLink to="/cart" className='navbar-color'>
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-cart2" viewBox="0 2 16 16">
                     <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
-                  </svg> Cart: {cartItems.length > 0 && (
-                    <span className="cartBadge">{cartItems.length}</span>
+                  </svg> Cart {cartItems.length > 0 && (
+                    <span className="cartBadge">:{cartItems.length}</span>
                   )}
                 </NavLink> 
                 
@@ -65,9 +67,9 @@ function App() {
         </Navbar>
 
         <Nav className="justify-content-center sticky-top bg-dark" id="nav-links">
-          <Nav.Item className="bg-dark"><Nav.Link aria-current="page" href="/#">Home</Nav.Link></Nav.Item>
+          <Nav.Item><Nav.Link aria-current="page" href="/#">Home</Nav.Link></Nav.Item>
           <Nav.Item><Nav.Link href="/#">About</Nav.Link></Nav.Item>
-          <Nav.Item><Nav.Link href="/#">Shop</Nav.Link></Nav.Item>
+          <Nav.Item><Nav.Link href="/shop">Shop</Nav.Link></Nav.Item>
           <Nav.Item><Nav.Link href="/#">Contact</Nav.Link></Nav.Item>
         </Nav>
 
@@ -76,6 +78,8 @@ function App() {
         <Route path="/cart/:id?" component={Cart}></Route>
         <Route path="/signin" component={Signin}></Route>
         <Route path="/signup" component={Signup}></Route>
+        <Route path="/shop" component={Shop}></Route>
+        <Route path="/shipping" component={Shipping}></Route>
       </body>
 
       <footer id="footer1" align="center">
